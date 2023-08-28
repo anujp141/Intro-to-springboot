@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+    <link rel=¨stylesheet¨ type=¨css¨ href=¨springboot.css¨>
+    <div class="container">
+        <h1>Welcome to My Spring Boot Website!</h1>
+        <p>This is the home page.</p>
+        <img src="https://cdn.pixabay.com/photo/2016/12/27/13/10/logo-1933884_640.png"  width="40" 
+        height="50" /> alt="logo image">
+
+        <a th:href="@{/about}">About Us</a>
+        <h2>Contact Us</h2>
+        <form th:action="@{/submit}" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        <a th:href="@{/form}">Submit a Form</a>
+    </div>
+</body>
+</html>
